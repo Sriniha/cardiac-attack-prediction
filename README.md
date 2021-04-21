@@ -22,4 +22,4 @@ Step-5: Then, the test data is used to test classifiers for their performance of
 
 Step-6: This model is then dumped using pickle which is again loaded when the patient’s attributes are entered for results by the doctor in the GUI.
 
-Step-7: The GUI is created, name “app.py”, using python language when executed generates a link which is a link of GUI interface for entering the data by the doctor. When attributes are entered and requested to predict, the pickle loaded in “app.py” is executed and the results are finally displayed. 
+Step-7: The GUI is created, name “app.py”, using python language when executed generates a link which is a link of GUI interface for entering the data by the doctor. Copy the link and paste it in the browser. When attributes are entered and requested to predict, the pickle loaded in “app.py” is executed and the results are finally displayed. 
