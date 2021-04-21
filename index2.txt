@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+  background-image: url({{url_for('static',filename='heart.png')}});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+</style>
+<title>Cardiac disease Prediction</title>
+</head>
+<body>
+
+<h1><center>Cardiac Disease Prediction</center></h1>
+
+<form action="{{url_for('predict')}}" method="post">
+<table>
+<tr><td>Age</td><td><input type='text' id='age' name='age'></input></td></tr>
+
+<tr><td>Sex</td><td><input type="radio" id="male" name="gender" value="1">
+	<label for="male">Male</label>
+	<input type="radio" id="female" name="gender" value="0">
+	<label for="female">Female</label></td></tr>
+
+<tr><td>Chest Pressure</td><td><input type="radio" id="cp0" name="cp" value="0">
+	<label for="cp0">Typical Angina</label>
+	<input type="radio" id="cp1" name="cp" value="1">
+	<label for="cp1">Atypical Angina</label>
+	<input type="radio" id="cp2" name="cp" value="2">
+	<label for="cp2">Non-Anginal Pain</label>
+	<input type="radio" id="cp3" name="cp" value="3">
+	<label for="cp3">Asymptomatic</label></td></tr>
+
+<tr><td>trestbps</td><td><input type='text' id='trestbps' name='trestbps'></input></td></tr>
+
+<tr><td>Cholestrol</td><td><input type='text' id='chol' name='chol'></input></td></tr>
+
+<tr><td>Fbs</td><td><input type="radio" id="fbs1" name="fbs" value="1">
+	<label for="fbs1">>120mg/dl</label>
+	<input type="radio" id="fbs0" name="fbs" value="0">
+	<label for="fbs0"><120mg/dl</label></td></tr>
+
+<tr><td>Rest ECG</td><td><input type='text' id='restecg' name='restecg'></input></td></tr>
+
+<tr><td>Thalch</td><td><input type='text' id='thalch' name='thalch'></input></td></tr>
+
+<tr><td>Exang</td><td><input type="radio" id="exang1" name="exang" value="1">
+	<label for="exang1">Yes</label>
+	<input type="radio" id="exang0" name="exang" value="0">
+	<label for="exang0">No</label></td></tr>
+
+<tr><td>Old Peak</td><td><input type='text' id='oldpeak' name='oldpeak'></input></td></tr>
+
+<tr><td>Slope</td><td><input type="radio" id="slope0" name="slope" value="0">
+	<label for="slope0">Up-Sloping</label>
+	<input type="radio" id="slope1" name="slope" value="1">
+	<label for="slope1">Flat</label>
+	<input type="radio" id="slope2" name="slope" value="2">
+	<label for="slope2">Down-Sloping</label></td></tr>
+
+<tr><td>CA</td><td><input type='text' id='ca' name='ca'></input></td></tr>
+
+<tr><td>Thal</td><td><input type='text' id='thal' name='thal'></input><br></td></tr>
+
+<tr><td><button type="submit">Predict</button></td>
+</table>
+</form>
+<br>
+<br>
+{{prediction_text}}
+</body>
+</html>
