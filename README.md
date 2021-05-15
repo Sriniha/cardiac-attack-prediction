@@ -2,9 +2,10 @@
 
 Before starting to model the data, need to do 2 steps:
  
-1. Store the file heart.png in a folder named static.
-2. Store the files index.html and index2.txt in a folder named templates.
-3. Now the code of whole project should be stored in a single folder named cardiac project.
+1. Create a folder name "cardiac project", then save all the files of the project in that. 
+2. Now, store the file heart.png in a new folder named "static" inside the same folder "cardiac project".
+3. Store the files index.html and index2.txt in an another folder named templates inside the same folder cardiac project.
+
 
 The code for the process below is in model.ipynb and in app.py
 
